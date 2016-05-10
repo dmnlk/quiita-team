@@ -327,7 +327,7 @@
 			var http = require('https');
 			var headers = {};
 			if(this.options.cookie) {
-				headers = { 'Cookie':this.options.cookie };
+				headers = { 'Cookie':this.options.cookie.replace(/\r?\n/g,"") };
 			}
 			var targets = [];
 
