@@ -28,7 +28,7 @@ if(opt.argv.length==0) {
 
 if(opt.options.cookie) {
 	try {
-		options.cookie = fs.readFileSync(opt.options.cookie);
+		options.cookie = fs.readFileSync(opt.options.cookie,"utf8");
 	} catch(e) {
 		console.log("Failed to load cookie file: " + opt.options.cookie);
 		process.exit(1);
